@@ -28,6 +28,9 @@
 
 pipeline {
     agent any
+    environment {
+      LT_BUILD_NAME  = "lambdatest-pipeline"
+    }
     stages {
     stage('Setup') {
       steps {
