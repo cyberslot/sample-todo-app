@@ -18,7 +18,7 @@ driver = webdriver.Remote(
   options= webdriver.ChromeOptions(),
   command_executor= url
 )
-driver.get("http://localhost:8081/")
+driver.get("http://95.111.6.231:8081/")
 driver.find_element_by_name("li3").click()
 
 textbox = driver.find_element_by_id("sampletodotext")
