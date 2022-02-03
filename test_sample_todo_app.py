@@ -7,7 +7,7 @@ url = os.getenv("LT_HUB_URL")
 capabilities = {
     "build" : os.getenv("LT_BUILD_NAME"),
     "name" : "Quick Test",
-    "platform" : "Windows 10",
+    "platform" : "Windows 11",
     "browserName" : "Chrome",
     "version" : "98.0",
     "resolution" : "1920x1080",
