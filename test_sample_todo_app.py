@@ -15,7 +15,7 @@ capabilities = {
 }
 driver = webdriver.Remote(
 #   desired_capabilities= capabilities,
-  options= webdriver.ChromeOptions()
+  options= webdriver.ChromeOptions(),
   command_executor= url
 )
 driver.get("http://localhost:8081/")
