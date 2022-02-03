@@ -19,13 +19,10 @@ driver = webdriver.Remote(
   command_executor= url
 )
 driver.get("http://95.111.6.231:8081/")
-# driver.find_element_by_name("li3").click()
-driver.find_element("li3").click()
-# textbox = driver.find_element_by_id("sampletodotext")
-textbox = driver.find_element("sampletodotext")
+driver.find_element_by_name("li3").click()
+textbox = driver.find_element_by_id("sampletodotext")
 textbox.send_keys("Testing")
-# driver.find_element_by_id("addbutton").click()
-driver.find_element("addbutton").click()
+driver.find_element_by_id("addbutton").click()
 assert "No results found." not in driver.page_source
 driver.execute_script("lambda-status=passed")
 driver.quit()
