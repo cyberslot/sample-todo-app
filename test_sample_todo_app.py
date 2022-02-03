@@ -5,17 +5,18 @@ import json
 
 url = os.getenv("LT_HUB_URL")
 capabilities = {
-    "build" : os.getenv("LT_BUILD_NAME"),
-    "name" : "Quick Test",
-    "platform" : "Windows 11",
-    "browserName" : "Chrome",
-    "version" : "98.0",
-    "resolution" : "1920x1080",
-    "tunnel" : True
+  "build" : os.getenv("LT_BUILD_NAME"),
+  "name" : "Quick Test",
+  "platform" : "Windows 11",
+  "browserName" : "Chrome",
+  "version" : "98.0",
+  "resolution" : "1920x1080",
+  "tunnel" : True
 }
 driver = webdriver.Remote(
-    desired_capabilities= capabilities,
-    command_executor= url
+#   desired_capabilities= capabilities,
+  capabilities= capabilities,
+  command_executor= url
 )
 driver.get("http://localhost:8081/")
 driver.find_element_by_name("li3").click()
